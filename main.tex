@@ -1,198 +1,54 @@
-% This text is proprietary.
-% It's a part of presentation made by myself.
-% It may not used commercial.
-% The noncommercial use such as private and study is free
-% Sep. 2010
-% Author: Sascha Frank 
-% University Freiburg 
-% www.informatik.uni-freiburg.de/~frank/
-%
-% 
+% Oct. 2012
+% Author: Carlos Quijano
+% Crqgestion 
+% http://crqgestion.es
+% Base file for latex beamer
 
 \documentclass[handout]{beamer}
-\setbeamertemplate{navigation symbols}{}
+% By default dont want navigation symbols
+% \setbeamertemplate{navigation symbols}{}
+% Alway utf8 is a good idea
+\usepackage[utf8]{inputenc}
+% Define our colos ( my case green)
+\definecolor{color1}{HTML}{53903E}
+\definecolor{color2}{HTML}{73B05E}
+\definecolor{color3}{HTML}{5B874B}
+\definecolor{color4}{HTML}{466D37}
+\usetheme{Madrid}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=color1}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=color2}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=color3}
 
-
-\usetheme{Warsaw}
-\usepackage{ngerman}
-\beamersetuncovermixins{\opaqueness<1>{25}}{\opaqueness<2->{15}}
 \begin{document}
-\title{Beamer Class Warsaw}  
-\author{Sascha Frank}
-\date{\today} 
+\title{Title}
+\author{Carlos Quijano}
 
+%Image at startup
+\titlegraphic{
+\includegraphics[width=5cm,height=5cm,keepaspectratio]{images/pdf/logo.pdf}
+ }
+\logo{
+    \includegraphics[width=1cm,height=1cm,keepaspectratio]{images/pdf/logo.pdf}
+    }
+\date{}%no date
+% \date{\today}
+%Title frame
 \begin{frame}
 \titlepage
 \end{frame} 
 
+%Table of contents
+\frame{\frametitle{Table of contents}\tableofcontents}
+
+%Simple frame with only one image
 \begin{frame}
-\frametitle{Table of contents}
-\tableofcontents
-\end{frame} 
-
-
-
-\section{Section no.1} 
-\begin{frame}\frametitle{Title} 
-Each frame should have a title.
-\end{frame}
-\subsection{Subsection no.1.1  }
-\begin{frame} 
-Without title somethink is missing. 
-\end{frame}
-
-
-\section{Section no. 2} 
-\subsection{Lists I}
-\begin{frame}\frametitle{unnumbered lists}
-\begin{itemize}
-\item Introduction to  \LaTeX  
-\item Course 2 
-\item Termpapers and presentations with \LaTeX 
-\item Beamer class
-\end{itemize} 
-\end{frame}
-
-\begin{frame}\frametitle{lists with pause}
-\begin{itemize}
-\item Introduction to  \LaTeX \pause 
-\item Course 2 \pause 
-\item Termpapers and presentations with \LaTeX \pause 
-\item Beamer class
-\end{itemize} 
-\end{frame}
-
-\subsection{Lists II}
-\begin{frame}\frametitle{numbered lists}
-\begin{enumerate}
-\item Introduction to  \LaTeX  
-\item Course 2 
-\item Termpapers and presentations with \LaTeX 
-\item Beamer class
-\end{enumerate}
-\end{frame}
-
-\begin{frame}\frametitle{numbered lists with pause}
-\begin{enumerate}
-\item Introduction to  \LaTeX \pause 
-\item Course 2 \pause 
-\item Termpapers and presentations with \LaTeX \pause 
-\item Beamer class
-\end{enumerate}
-\end{frame}
-
-\section{Section no.3} 
-\subsection{Tables}
-\begin{frame}\frametitle{Tables}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Date} & \textbf{Instructor} & \textbf{Title} \\
-\hline
-WS 04/05 & Sascha Frank & First steps with  \LaTeX  \\
-\hline
-SS 05 & Sascha Frank & \LaTeX \ Course serial \\
-\hline
-\end{tabular}
-\end{frame}
-
-
-\begin{frame}\frametitle{Tables with pause}
-\begin{tabular}{c c c}
-A & B & C \\ 
-\pause 
-1 & 2 & 3 \\  
-\pause 
-A & B & C \\ 
-\end{tabular} 
-\end{frame}
-
-
-\section{Section no. 4}
-\subsection{blocs}
-\begin{frame}\frametitle{blocs}
-
-\begin{block}{title of the bloc}
-bloc text
-\end{block}
-
-\begin{exampleblock}{title of the bloc}
-bloc text
-\end{exampleblock}
-
-
-\begin{alertblock}{title of the bloc}
-bloc text
-\end{alertblock}
-\end{frame}
-
-\section{Section no. 5}
-\subsection{split screen}
-
-\begin{frame}\frametitle{splitting screen}
-\begin{columns}
-\begin{column}{5cm}
-\begin{itemize}
-\item Beamer 
-\item Beamer Class 
-\item Beamer Class Latex 
-\end{itemize}
-\end{column}
-\begin{column}{5cm}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Instructor} & \textbf{Title} \\
-\hline
-Sascha Frank &  \LaTeX \ Course 1 \\
-\hline
-Sascha Frank &  Course serial  \\
-\hline
-\end{tabular}
-\end{column}
-\end{columns}
-\end{frame}
-
-\subsection{Pictures} 
-\begin{frame}\frametitle{pictures in latex beamer class}
+\frametitle{title1}
+\subsection{Subsection_name} 
 \begin{figure}
-\includegraphics[scale=0.5]{PIC1} 
-\caption{show an example picture}
+% Use yours svg images with png estention
+\includegraphics[width=\linewidth,keepaspectratio,height=\textheight]{images/pdf/1.pdf} 
 \end{figure}
 \end{frame}
-
-\subsection{joining picture and lists} 
-
-\begin{frame}
-\frametitle{pictures and lists in beamer class}
-\begin{columns}
-\begin{column}{5cm}
-\begin{itemize}
-\item<1-> subject 1
-\item<3-> subject 2
-\item<5-> subject 3
-\end{itemize}
-\vspace{3cm} 
-\end{column}
-\begin{column}{5cm}
-\begin{overprint}
-\includegraphics<2>{PIC1}
-\includegraphics<4>{PIC2}
-\includegraphics<6>{PIC3}
-\end{overprint}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\subsection{pictures which need more space} 
-\begin{frame}[plain]
-\frametitle{plain, or a way to get more space}
-\begin{figure}
-\includegraphics[scale=0.5]{PIC1} 
-\caption{show an example picture}
-\end{figure}
-\end{frame}
-
-
 
 
 \end{document}
