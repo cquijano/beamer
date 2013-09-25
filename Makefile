@@ -17,5 +17,5 @@ pdf:
 	mkdir -p images/pdf
 	for i in images/svg/*; do $(SVGCONVERT) -f pdf  $$i -o `echo $$i | sed -e 's/svg/pdf/g'`; done
 png:
-	mkdir -p images/jpg
-	for i in images/svg/*; do $(SVGCONVERT) -f png  $$i -o `echo $$i | sed -e 's/svg/jpg/g'`; done
+	mkdir -p images/png
+	for i in images/svg/*; do $(SVGCONVERT) -f png  $$i -o `echo $$i | sed -e 's/svg/png/g'`; done
